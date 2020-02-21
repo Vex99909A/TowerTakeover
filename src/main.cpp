@@ -120,7 +120,7 @@ void autonomous() {
   pros::lcd::set_text(0, "opcontrol has started!");
 
 
- 	//start all tasks here now
+ 	//start all tasks here now now
  	pros::Task DriveTrain(DriveTrain_fn, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "My Task");
 	pros::Task Lift(Lift_fn, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "My Task");
 	pros::Task Claw(Claw_fn, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "My Task");
