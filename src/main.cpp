@@ -18,14 +18,14 @@ void on_center_button() {
 
 void on_left_button() {
 	//autonselector = (autonselector -1 + 5) % 5;
-	autonselector = (autonselector + 7) % 8;
+	autonselector = (autonselector + 3) % 4;
 	pros::lcd::set_text(2, titles[autonselector]);
 	//print to controller screen
 	master.print(0, 0, titles[autonselector]);
 }
 
 void on_right_button() {
-	autonselector = (autonselector + 1) % 8;
+	autonselector = (autonselector + 1) % 4;
 	pros::lcd::set_text(2, titles[autonselector]);
 	//print to controller screen
 	master.print(0, 0, titles[autonselector]);
@@ -119,7 +119,7 @@ void autonomous() {
   //print "opcontrol has started" on brain screen
   pros::lcd::set_text(0, "opcontrol has started!");
 
- 	//start all tasks here now now
+ 	//start all tasks here
  	pros::Task DriveTrain(DriveTrain_fn, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "My Task");
 	pros::Task Lift(Lift_fn, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "My Task");
 	pros::Task Claw(Claw_fn, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "My Task");

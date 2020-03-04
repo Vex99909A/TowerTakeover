@@ -13,6 +13,15 @@ void Drive(double distance, int speed) {
   BRMotor.move_relative(distance, speed);
 }
 
+//set drive target, and wait for them to reach their target
+void DriveTarget(double distance, int speed) {
+  Drive(distance, speed);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceDriveGoal(5));
+  pros::delay(20);
+}
+
 //turn to target position, but does not wait for them to reach their target
 void Rotate(double distance, int speed) {
   FLMotor.move_relative(distance, speed);
@@ -21,7 +30,14 @@ void Rotate(double distance, int speed) {
   BRMotor.move_relative(-distance, speed);
 }
 
-
+//turn to target position, and wait for them to reach their target
+void RotateTarget(double distance, int speed) {
+  Rotate(distance, speed);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceDriveGoal(5));
+  pros::delay(20);
+}
 
 //thread for all drive train controls
 void DriveTrain_fn(void* param) {

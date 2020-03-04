@@ -89,6 +89,10 @@ void Redbasic(){
   Lift(400.0, 100);
   pros::delay(100);
 }
+
+
+
+/**auton function for BLUE side CLOSE to goal zone**/
 void Bluebasic(){
   Drive(75.0, 50);
   do {
@@ -182,9 +186,9 @@ void Bluebasic(){
   pros::delay(100);
 }
 
-/**auton function for BLUE side CLOSE to goal zone**/
 
-//Basic auto function
+
+//Basic auto function - 1 cube
 void basic(){
   Drive(-800, 100);
   pros::delay(2000);
@@ -217,8 +221,8 @@ void basic(){
 
 /**varirables and functions array for auton selector**/
 int autonselector = 0;
-const char *titles[] = {"Redbasic", "bluebasic", "basic"};
+const char *titles[] = {"Redbasic", "Bluebasic", "basic", "Skills Auton"};
 
-void (*scripts[])() = {&Redbasic, &Bluebasic, &basic};
+void (*scripts[])() = {&Redbasic, &Bluebasic, &basic, &SkillsAuton};
 
 void LCDScriptExecute() {scripts[autonselector]();}

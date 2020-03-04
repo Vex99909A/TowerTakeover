@@ -7,14 +7,16 @@ void SkillsAuton(){
     pros::delay(20);
   } while (!AtDistanceDriveGoal(5));
   pros::delay(20);
-  Lift(600.0, 100);
+  Lift(450.0, 100);
+  //Lift(600.0, 100);
   pros::delay(100);
   do {
     pros::delay(20);
-    Claw(-5.0, 100);
+    Claw(-10.0, 100);
   } while (!AtDistanceLiftGoal(100));
-  pros::delay(20);
-  Lift(-400.0, 75);
+  pros::delay(500);
+  Lift(-300.0, 75);
+  //Lift(-400.0, 75);
   do{
     pros::delay(20);
     Claw(-5.0, 100);
@@ -25,9 +27,11 @@ void SkillsAuton(){
     pros::delay(20);
   } while (!AtDistanceDriveGoal(5));
   pros::delay(20);
-  Lift(-200.0, 100);
+  Lift(-300.0, 100);
+  //Lift(-200.0, 100);
   pros::delay(1000);
-  Lift(600.0, 100);
+  Lift(700.0, 100);
+  //Lift(600.0, 100);
   do {
     pros::delay(20);
     Claw(-5.0, 100);
@@ -139,68 +143,68 @@ void SkillsAuton(){
     pros::delay(20);
   } while (!AtDistanceDriveGoal(5));
   pros::delay(20);
-  // Drive(700.0, 100);
-  // Lift(-600.0, 100);
-  // Claw(300.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceDriveGoal(5));
-  // pros::delay(20);
-  // Claw(-300.0, 100);
-  // pros::delay(500);
-  // Lift(500.0, 100);
-  // Drive(-200.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceLiftGoal(5));
-  // pros::delay(20);
-  // Drive(400.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceLiftGoal(5));
-  // pros::delay(20);
-  // Claw(150.0, 100);
-  // pros::delay(500);
-  // Lift(200.0, 100);
-  // Claw(-150.0, 50);
-  // pros::delay(750);
-  // Drive(-3000.0, 100);
-  // pros::delay(3000);
-  // Drive(300.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceLiftGoal(5));
-  // pros::delay(20);
-  // Rotate(-300.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceLiftGoal(5));
-  // pros::delay(20);
-  // Drive(1500.0, 100);
-  // Lift(-600.0, 100);
-  // Claw(150.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceDriveGoal(5));
-  // pros::delay(20);
-  // Claw(-150.0, 100);
-  // pros::delay(500);
-  // Lift(500.0, 100);
-  // Drive(-200.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceLiftGoal(5));
-  // pros::delay(20);
-  // Drive(400.0, 100);
-  // do {
-  //   pros::delay(20);
-  // } while (!AtDistanceLiftGoal(5));
-  // pros::delay(20);
-  // Claw(150.0, 100);
-  // pros::delay(500);
-  // Lift(200.0, 100);
-  // Claw(-150.0, 50);
-  // pros::delay(750);
-  // Drive(-500.0, 100);
+  Drive(700.0, 100);
+  Lift(-600.0, 100);
+  Claw(300.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceDriveGoal(5));
+  pros::delay(20);
+  Claw(-300.0, 100);
+  pros::delay(500);
+  Lift(500.0, 100);
+  Drive(-200.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceLiftGoal(5));
+  pros::delay(20);
+  Drive(400.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceLiftGoal(5));
+  pros::delay(20);
+  Claw(150.0, 100);
+  pros::delay(500);
+  Lift(200.0, 100);
+  Claw(-150.0, 50);
+  pros::delay(750);
+  Drive(-3000.0, 100);
+  pros::delay(3000);
+  Drive(300.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceLiftGoal(5));
+  pros::delay(20);
+  Rotate(-300.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceLiftGoal(5));
+  pros::delay(20);
+  Drive(1500.0, 100);
+  Lift(-600.0, 100);
+  Claw(150.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceDriveGoal(5));
+  pros::delay(20);
+  Claw(-150.0, 100);
+  pros::delay(500);
+  Lift(500.0, 100);
+  Drive(-200.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceLiftGoal(5));
+  pros::delay(20);
+  Drive(400.0, 100);
+  do {
+    pros::delay(20);
+  } while (!AtDistanceLiftGoal(5));
+  pros::delay(20);
+  Claw(150.0, 100);
+  pros::delay(500);
+  Lift(200.0, 100);
+  Claw(-150.0, 50);
+  pros::delay(750);
+  Drive(-500.0, 100);
   pros::delay(1000000);
 }

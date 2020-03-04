@@ -8,7 +8,7 @@
 #define LiftLMotorPort 7
 #define LiftRMotorPort 3
 /*cube claw motor port*/
-#define ClawMotorPort 9
+#define ClawMotorPort 13
 //port 4 fried
 //define all sensor ports constant variables here
 /**
@@ -47,13 +47,18 @@ extern int turn;
 void DriveTrain_fn(void* param);
 /*drive train functions*/
 void Drive(double, int);
+void DriveTarget(double, int);
+
 void Rotate(double, int);
+void RotateTarget(double, int);
 
 bool AtDistanceDriveGoal(int);
 
 //declare lift function prototype
 void Lift_fn(void* param);
+/*lift functions*/
 void Lift(double, int);
+void LiftTarget(double, int);
 
 bool AtDistanceLiftGoal(int);
 
@@ -66,18 +71,15 @@ bool AtDistanceClawGoal(int);
 
 //declare functions for antonomous.cpp
 /* function for red alliance side close to goal zone*/
-void RedGoalSide();
-void RedFarSide();
-void BlueGoalSide();
-void BlueFarSide();
 void basic();
-void BlueBasic();
+void Bluebasic();
 void Redbasic();
 
 void SkillsAuton();
+
 /* variables and functions for auton selector */
 extern int autonselector;
-extern const char *titles[8];
-extern void (*scripts[8])();
+extern const char *titles[4];
+extern void (*scripts[4])();
 
 void LCDScriptExecute();
